@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'rest_framework',
+    'rest_framework',
     'organics',
     'sku',
     'market',
-#    'phonenumber_field'
+    'phonenumber_field'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'organics.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('ORGANICS_PG_DATABASE'),
+        'USER': os.environ.get('ORGANICS_PG_USER'),
+        'PASSWORD': os.environ.get('ORGANICS_PG_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 

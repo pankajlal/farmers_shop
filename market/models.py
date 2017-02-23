@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from sku.models import SKU, Unit
 from django.contrib.auth.models import User
-#from phonenumber_field.modelfields import PhoneNumberField
+from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 class Locality(models.Model):
@@ -28,7 +28,7 @@ class Community(models.Model):
 
 class Customer(models.Model):
     u = models.OneToOneField(User)
-    #phone = PhoneNumberField()
+    phone = PhoneNumberField()
     door_number = models.CharField(max_length=20)
     community = models.ForeignKey(Community)
 
@@ -37,7 +37,7 @@ class Customer(models.Model):
 
 class Vendor(models.Model):
     u = models.OneToOneField(User)
-    #phone = PhoneNumberField()
+    phone = PhoneNumberField()
     address = models.TextField()
 
 class MelaLocation(models.Model):
