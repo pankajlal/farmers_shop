@@ -25,7 +25,7 @@ SECRET_KEY = '#l#7*48%hjt)0bk9=y@+op3w$jp&)8gm^36b(&zgra7x@l=&k8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["organics.samaadhaan.org"]
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")]
 
 
 # Application definition
