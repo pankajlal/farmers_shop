@@ -57,6 +57,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'organics.urls'
 
+STATIC_ROOT= os.path.join(BASE_DIR, "static")
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
