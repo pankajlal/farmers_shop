@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "description": "Frontend for the farmers_shop project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pankajlal/farmers_shop.git"
+  },
+  "author": "Pankaj Ratan Lal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankajlal/farmers_shop/issues"
+  },
+  "homepage": "https://github.com/pankajlal/farmers_shop#readme",
+  "devDependencies": {
+    "browserify": "^14.1.0"
+  },
+  "dependencies": {
+    "browserify": "^14.1.0"
+  }
+}
